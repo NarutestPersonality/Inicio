@@ -1,11 +1,10 @@
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    background: rgba(254, 122, 53);
+    background-image: linear-gradient(rgb(250, 169, 30) 20%, rgba(254, 122, 53));
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,10 +21,14 @@ h1 {
     text-align: center;
     margin-top: 30px;
     font-family: naruto;
-    -webkit-text-stroke: 1.5px rgb(4, 69, 154);
+    -webkit-text-stroke: 0.6px rgba(4, 84, 189, 0.871);
     background-image: linear-gradient(rgba(253, 159, 0), rgba(251, 68, 3));
     background-clip: text;
     color: transparent;
+}
+
+a {
+    text-decoration: none;
 }
 
 main {
@@ -37,7 +40,7 @@ main {
 
 .contenedor {
     text-align: center;
-    margin: 4rem;
+    margin: 1rem;
     border: 2px solid black;
     border-radius: 10px;
     padding: 2rem;
@@ -47,6 +50,23 @@ main {
 .pregunta {
     margin: 10px;
     color: black;
+    animation: aparecerPregunta 0.4s ease;
+}
+
+.pregunta.animar {
+    animation: aparecerPregunta 0.4s ease;
+}
+
+@keyframes aparecerPregunta {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .respuestas {
@@ -75,6 +95,11 @@ main {
     background: none;
     font-family: inherit;
     cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.respuestas button:hover {
+    background:rgba(0, 0, 0, 0.4);
 }
 
 .resultado {
@@ -88,6 +113,8 @@ main {
     height: auto;
     margin-top: 20px;
     margin-bottom: 70px;
+    filter: drop-shadow(4px 2px 2px rgba(0, 0, 0, 0.608));
+
 }
 
 footer {

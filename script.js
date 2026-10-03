@@ -17,6 +17,15 @@ const personajes = {
     Guy: 0
 };
 
+const fondos = [
+    "sasuback.jpg",
+    "leeback.jpg",
+    "naruback.jpg",
+    "itaback.jpg",
+    "jiraback.jpg",
+    "kashiback.jpg"
+];
+
 const preguntas = [
     {
         pregunta: "¿Qué pacto de invocación elegirías?",
@@ -65,7 +74,7 @@ const preguntas = [
                 }
             }
         ]
-},
+    },
 
     {
         pregunta: "¿Qué harías ante una situación difícil?",
@@ -94,7 +103,7 @@ const preguntas = [
                 }
             }
         ]
-},
+    },
 
     {
         pregunta: "Si la misión se pone difícil, ¿qué decisión tomarías?",
@@ -131,178 +140,178 @@ const preguntas = [
                 }
             }
         ]
-},
+    },
 
     {
-    pregunta: "¿Qué es lo que más valoras en una persona?",
-    opciones: [
-        {
-            texto: "Que nunca abandone a quienes quiere.",
-            puntos: {
-                Naruto: 3,
-                Jiraiya: 2
+        pregunta: "¿Qué es lo que más valoras en una persona?",
+        opciones: [
+            {
+                texto: "Que nunca abandone a quienes quiere.",
+                puntos: {
+                    Naruto: 3,
+                    Jiraiya: 2
+                }
+            },
+            {
+                texto: "Que sea capaz de mantener la calma en cualquier situación.",
+                puntos: {
+                    Kakashi: 3,
+                    Itachi: 2
+                }
+            },
+            {
+                texto: "Que tenga una meta y esté dispuesto a hacer lo necesario para alcanzarla.",
+                puntos: {
+                    Sasuke: 4,
+                    Itachi: 1
+                }
+            },
+            {
+                texto: "Que pueda entender a los demás incluso cuando no dicen lo que sienten.",
+                puntos: {
+                    Itachi: 2,
+                    Jiraiya: 2,
+                    Kakashi: 1
+                }
             }
-        },
-        {
-            texto: "Que sea capaz de mantener la calma en cualquier situación.",
-            puntos: {
-                Kakashi: 3,
-                Itachi: 2
-            }
-        },
-        {
-            texto: "Que tenga una meta y esté dispuesto a hacer lo necesario para alcanzarla.",
-            puntos: {
-                Sasuke: 4,
-                Itachi: 1
-            }
-        },
-        {
-            texto: "Que pueda entender a los demás incluso cuando no dicen lo que sienten.",
-            puntos: {
-                Itachi: 2,
-                Jiraiya: 2,
-                Kakashi: 1
-            }
-        }
-    ]
-},
+        ]
+    },
 
     {
-    pregunta: "Después de sufrir una derrota importante, ¿qué harías?",
-    opciones: [
-        {
-            texto: "Volvería a intentarlo hasta conseguirlo.",
-            puntos: {
-                Naruto: 4,
-                Jiraiya: 1
+        pregunta: "Después de sufrir una derrota importante, ¿qué harías?",
+        opciones: [
+            {
+                texto: "Volvería a intentarlo hasta conseguirlo.",
+                puntos: {
+                    Naruto: 4,
+                    Jiraiya: 1
+                }
+            },
+            {
+                texto: "Analizaría mis errores antes de volver a intentarlo.",
+                puntos: {
+                    Kakashi: 3,
+                    Itachi: 2
+                }
+            },
+            {
+                texto: "Me obsesionaría con superar a quien me derrotó.",
+                puntos: {
+                    Sasuke: 4,
+                    Naruto: 1
+                }
+            },
+            {
+                texto: "Intentaría aprender algo de la derrota y seguir adelante.",
+                puntos: {
+                    Jiraiya: 3,
+                    Kakashi: 2
+                }
             }
-        },
-        {
-            texto: "Analizaría mis errores antes de volver a intentarlo.",
-            puntos: {
-                Kakashi: 3,
-                Itachi: 2
-            }
-        },
-        {
-            texto: "Me obsesionaría con superar a quien me derrotó.",
-            puntos: {
-                Sasuke: 4,
-                Naruto: 1
-            }
-        },
-        {
-            texto: "Intentaría aprender algo de la derrota y seguir adelante.",
-            puntos: {
-                Jiraiya: 3,
-                Kakashi: 2
-            }
-        }
-    ]
-},
+        ]
+    },
 
     {
-    pregunta: "¿Qué papel sueles tomar cuando trabajas con otras personas?",
-    opciones: [
-        {
-            texto: "El que mantiene al grupo unido y anima a los demás.",
-            puntos: {
-                Naruto: 4,
-                Jiraiya: 1
+        pregunta: "¿Qué papel sueles tomar cuando trabajas con otras personas?",
+        opciones: [
+            {
+                texto: "El que mantiene al grupo unido y anima a los demás.",
+                puntos: {
+                    Naruto: 4,
+                    Jiraiya: 1
+                }
+            },
+            {
+                texto: "El que observa la situación y decide cuándo intervenir.",
+                puntos: {
+                    Kakashi: 3,
+                    Itachi: 2
+                }
+            },
+            {
+                texto: "El que prefiere encargarse de su parte por su cuenta.",
+                puntos: {
+                    Sasuke: 4,
+                    Itachi: 1
+                }
+            },
+            {
+                texto: "El que intenta enseñar o aconsejar a los demás.",
+                puntos: {
+                    Jiraiya: 4,
+                    Kakashi: 1
+                }
             }
-        },
-        {
-            texto: "El que observa la situación y decide cuándo intervenir.",
-            puntos: {
-                Kakashi: 3,
-                Itachi: 2
-            }
-        },
-        {
-            texto: "El que prefiere encargarse de su parte por su cuenta.",
-            puntos: {
-                Sasuke: 4,
-                Itachi: 1
-            }
-        },
-        {
-            texto: "El que intenta enseñar o aconsejar a los demás.",
-            puntos: {
-                Jiraiya: 4,
-                Kakashi: 1
-            }
-        }
-    ]
-},
+        ]
+    },
 
     {
-    pregunta: "Si descubrieras que alguien cercano te ha estado ocultando una verdad importante, ¿qué harías?",
-    opciones: [
-        {
-            texto: "Intentaría entender por qué decidió ocultármelo.",
-            puntos: {
-                Naruto: 3,
-                Jiraiya: 2
+        pregunta: "Si descubrieras que alguien cercano te ha estado ocultando una verdad importante, ¿qué harías?",
+        opciones: [
+            {
+                texto: "Intentaría entender por qué decidió ocultármelo.",
+                puntos: {
+                    Naruto: 3,
+                    Jiraiya: 2
+                }
+            },
+            {
+                texto: "Mantendría la calma y buscaría toda la información antes de reaccionar.",
+                puntos: {
+                    Kakashi: 3,
+                    Itachi: 2
+                }
+            },
+            {
+                texto: "Me sentiría traicionado y exigiría saber toda la verdad.",
+                puntos: {
+                    Sasuke: 4,
+                    Naruto: 1
+                }
+            },
+            {
+                texto: "Probablemente ya sospecharía que había algo detrás.",
+                puntos: {
+                    Itachi: 3,
+                    Kakashi: 2
+                }
             }
-        },
-        {
-            texto: "Mantendría la calma y buscaría toda la información antes de reaccionar.",
-            puntos: {
-                Kakashi: 3,
-                Itachi: 2
-            }
-        },
-        {
-            texto: "Me sentiría traicionado y exigiría saber toda la verdad.",
-            puntos: {
-                Sasuke: 4,
-                Naruto: 1
-            }
-        },
-        {
-            texto: "Probablemente ya sospecharía que había algo detrás.",
-            puntos: {
-                Itachi: 3,
-                Kakashi: 2
-            }
-        }
-    ]
-},
+        ]
+    },
 
     {
-    pregunta: "Si tuvieras que elegir una sola forma de mejorar, ¿cuál escogerías?",
-    opciones: [
-        {
-            texto: "Entrenar hasta superar mis propios límites.",
-            puntos: {
-                Naruto: 3,
-                Jiraiya: 2
+        pregunta: "Si tuvieras que elegir una sola forma de mejorar, ¿cuál escogerías?",
+        opciones: [
+            {
+                texto: "Entrenar hasta superar mis propios límites.",
+                puntos: {
+                    Naruto: 3,
+                    Jiraiya: 2
+                }
+            },
+            {
+                texto: "Aprender de personas con más experiencia que yo.",
+                puntos: {
+                    Jiraiya: 3,
+                    Kakashi: 2
+                }
+            },
+            {
+                texto: "Estudiar mis debilidades y desarrollar una estrategia para compensarlas.",
+                puntos: {
+                    Kakashi: 3,
+                    Itachi: 2
+                }
+            },
+            {
+                texto: "Encontrar mi propio camino, aunque tenga que hacerlo solo.",
+                puntos: {
+                    Sasuke: 4,
+                    Itachi: 1
+                }
             }
-        },
-        {
-            texto: "Aprender de personas con más experiencia que yo.",
-            puntos: {
-                Jiraiya: 3,
-                Kakashi: 2
-            }
-        },
-        {
-            texto: "Estudiar mis debilidades y desarrollar una estrategia para compensarlas.",
-            puntos: {
-                Kakashi: 3,
-                Itachi: 2
-            }
-        },
-        {
-            texto: "Encontrar mi propio camino, aunque tenga que hacerlo solo.",
-            puntos: {
-                Sasuke: 4,
-                Itachi: 1
-            }
-        }
-    ]
-}
+        ]
+    }
 ];
 
 let preguntaActual = 0;
@@ -339,7 +348,18 @@ function mostrarResultado() {
 function mostrarPregunta() {
     const pregunta = preguntas[preguntaActual];
 
+    const fondoAleatorio = fondos[Math.floor(Math.random() * fondos.length)];
+
     elementoPregunta.textContent = pregunta.pregunta;
+
+    elementoPregunta.classList.remove("animar");
+    void elementoPregunta.offsetWidth;
+    elementoPregunta.classList.add("animar");
+
+    elementoRespuestas.style.backgroundImage = `
+        linear-gradient(rgba(58, 58, 58, 0.4), rgba(8, 8, 8, 0.4)),
+        url("./media/${fondoAleatorio}")
+    `;
 
     elementoRespuestas.innerHTML = "";
 

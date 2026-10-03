@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: linear-gradient(rgb(250, 169, 30) 20%, rgba(254, 122, 53));
     min-height: 100vh;

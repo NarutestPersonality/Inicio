@@ -341,7 +341,7 @@ function mostrarResultado() {
 
     elementoResultado.innerHTML = `
         <h2>¡Tu personalidad es similar a la de ${ganador}!</h2>
-        <img src="./media/personajes/${ganador}.png" alt="${ganador}">
+        <img src="./media/personajes/${ganador}.png" alt="${ganador}" loading="lazy" decoding="async">
     `;
 }
 

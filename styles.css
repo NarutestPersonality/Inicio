@@ -1,5 +1,6 @@
 * {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -20,19 +21,58 @@ body {
     src: url("./media/njnaruto.ttf") format("truetype");
 }
 
+header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: black;
+    padding: 10px 20px;
+    gap: 10px;
+    border-bottom: 5px solid rgb(228, 119, 3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.narulogo {
+    width: 55px;
+    height: auto;
+}
+
 h1 {
-    font-size: 40px;
-    text-align: center;
-    margin-top: 30px;
+    font-size: 23px;
     font-family: naruto;
     -webkit-text-stroke: 0.6px rgba(4, 84, 189, 0.871);
     background-image: linear-gradient(rgba(253, 159, 0), rgba(251, 68, 3));
     background-clip: text;
     color: transparent;
+    margin-bottom: 10px;
 }
 
 a {
     text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    color: #ddd;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: rgba(255, 167, 15, 0.849);
 }
 
 main {
@@ -122,14 +162,47 @@ main {
 }
 
 footer {
+    background: black;
+    color: whitesmoke;
+    padding: 10px 20px;
+    border-top: 5px solid  rgb(255, 177, 50);
     text-align: center;
-    margin: 10px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
 }
+
+.copy {
+    color: rgb(250, 248, 246);
+    padding-top: 5px;
+    font-size: smaller;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+summary {
+    padding: 8px 0px;
+}
+
+summary:hover {
+    color: orange;
+}
+
+summary::marker {
+    color: rgb(253, 169, 43);
+    font-size: 0.8rem;
+}
+
 
 /*MOBILE VER.*/
 
-@media (max-width: 520px) {
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+}
 
     h1 {
         font-size: 32px;
@@ -180,5 +253,3 @@ footer {
     footer {
         margin-top: 20px;
     }
-
-}

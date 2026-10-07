@@ -202,7 +202,6 @@ summary::marker {
     nav ul {
         justify-content: center;
     }
-}
 
     h1 {
         font-size: 32px;
@@ -253,3 +252,5 @@ summary::marker {
     footer {
         margin-top: 20px;
     }
+
+}

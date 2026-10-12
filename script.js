@@ -5,16 +5,16 @@ const personajes = {
     Gaara: 0,
     Shikamaru: 0,
     Jiraiya: 0,
-    Minato: 0,
     Orochimaru: 0,
-    Kabuto: 0,
     Tsunade: 0,
     Sakura: 0,
-    Kiba: 0,
     Hiruzen: 0,
     Itachi: 0,
-    Shisui: 0,
-    Guy: 0
+    Rock_Lee: 0,
+    Neji: 0,
+    Hinata: 0,
+    Choji: 0,
+    Shino: 0
 };
 
 const fondos = [
@@ -28,22 +28,155 @@ const fondos = [
 
 const preguntas = [
     {
-        pregunta: "¿Qué pacto de invocación elegirías?",
+        pregunta: "¿Qué elemento te gustaría poseer?",
+        opciones: [
+            {
+                texto: "Fuego",
+                puntos: {
+                    Naruto: 3,
+                    Jiraiya: 2
+                }
+            },
+            {
+                texto: "Agua",
+                puntos: {
+                    Orochimaru: 3,
+                    Sasuke: 2
+                }
+            },
+            {
+                texto: "Rayo",
+                puntos: {
+                    Tsunade: 3,
+                    Sakura: 2
+                }
+            },
+            {
+                texto: "Tierra",
+                puntos: {
+                    Kakashi: 5
+                }
+            },
+            {
+                texto: "Viento",
+                puntos: {
+                    Hiruzen: 5
+                }
+            },
+            {
+                texto: "Taijutsu",
+                puntos: {
+                    Rock_Lee: 5
+                }
+            }
+        ]
+    },
+
+        {
+        pregunta: "¿A qué aldea te gustaría pertenecer?",
+        opciones: [
+            {
+                texto: "Aldea de la hoja",
+                puntos: {
+                    Naruto: 3,
+                    Jiraiya: 2
+                }
+            },
+            {
+                texto: "Aldea de la arena",
+                puntos: {
+                    Orochimaru: 3,
+                    Sasuke: 2
+                }
+            },
+            {
+                texto: "Aldea de la nube",
+                puntos: {
+                    Tsunade: 3,
+                    Sakura: 2
+                }
+            },
+            {
+                texto: "Aldea de la roca",
+                puntos: {
+                    Kakashi: 5
+                }
+            },
+            {
+                texto: "Aldea de la niebla",
+                puntos: {
+                    Hiruzen: 5
+                }
+            },
+            {
+                texto: "Aldea de la lluvia",
+                puntos: {
+                    Rock_Lee: 5
+                }
+            }
+        ]
+    },
+
+            {
+        pregunta: "¿Qué habilidad sanguínea te gustaría poseer?",
+        opciones: [
+            {
+                texto: "Sharingan",
+                puntos: {
+                    Itachi: 3,
+                    Sasuke: 2
+                }
+            },
+            {
+                texto: "Byakugan",
+                puntos: {
+                    Neji: 3,
+                    Hinata: 2
+                }
+            },
+            {
+                texto: "Elemento Madera",
+                puntos: {
+                    Tsunade: 3,
+                    Rock_Lee: 2
+                }
+            },
+            {
+                texto: "Elemento Lava",
+                puntos: {
+                    Sasuke: 5
+                }
+            },
+            {
+                texto: "Elemento Hielo",
+                puntos: {
+                    Hiruzen: 5
+                }
+            },
+            {
+                texto: "Elemento Polvo",
+                puntos: {
+                    Gaara: 5
+                }
+            }
+        ]
+    },
+
+    {
+            pregunta: "¿Qué pacto de invocación elegirías?",
         opciones: [
             {
                 texto: "🐸 Sapos",
                 puntos: {
-                    Naruto: 2,
-                    Jiraiya: 2,
-                    Minato: 1
+                    Naruto: 3,
+                    Jiraiya: 2
                 }
             },
             {
                 texto: "🐍 Serpientes",
                 puntos: {
                     Orochimaru: 3,
-                    Kabuto: 1,
-                    Sasuke: 1
+                    Sasuke: 2
                 }
             },
             {
@@ -56,8 +189,7 @@ const preguntas = [
             {
                 texto: "🐕 Perros",
                 puntos: {
-                    Kakashi: 3,
-                    Kiba: 2
+                    Kakashi: 5
                 }
             },
             {
@@ -69,8 +201,7 @@ const preguntas = [
             {
                 texto: "🐦‍⬛ Cuervos",
                 puntos: {
-                    Itachi: 3,
-                    Shisui: 2
+                    Itachi: 5
                 }
             }
         ]
@@ -84,22 +215,31 @@ const preguntas = [
                 puntos: {
                     Naruto: 3,
                     Gaara: 1,
-                    Sasuke: 1
+                    Hinata: 1
                 }
             },
             {
                 texto: "Analizar la situación antes de actuar.",
                 puntos: {
                     Shikamaru: 3,
-                    Kakashi: 2
+                    Kakashi: 1,
+                    Shino: 1
                 }
             },
             {
                 texto: "Buscar una forma de superar mis límites.",
                 puntos: {
-                    Sasuke: 2,
-                    Naruto: 2,
-                    Gaara: 1
+                    Rock_Lee: 3,
+                    Sasuke: 1,
+                    Neji: 1
+                }
+            },
+            {
+                texto: "Paralizarme y abandonar la situación.",
+                puntos:{ 
+                    Hinata: 2,
+                    Sakura: 2,
+                    Hiruzen: 1
                 }
             }
         ]
@@ -111,7 +251,7 @@ const preguntas = [
             {
                 texto: "Priorizar el éxito de la misión.",
                 puntos: {
-                    Sasuke: 2,
+                    Neji: 2,
                     Gaara: 1,
                     Itachi: 2
                 }
@@ -120,23 +260,22 @@ const preguntas = [
                 texto: "Priorizar la supervivencia del equipo.",
                 puntos: {
                     Naruto: 2,
-                    Minato: 2,
-                    Guy: 1
+                    Choji: 2,
+                    Tsunade: 1
                 }
             },
             {
                 texto: "Separar el equipo en dos, uno avanza, el otro regresa.",
                 puntos: {
                     Kakashi: 2,
-                    Naruto: 2,
-                    Shikamaru: 1
+                    Shikamaru: 3
                 }
             },
             {
                 texto: "Retrasar la misión para crear una estrategia que beneficie a todos.",
                 puntos: {
-                    Itachi: 2,
-                    Shikamaru: 3
+                    Hiruzen: 3,
+                    Shikamaru: 2
                 }
             }
         ]
@@ -148,30 +287,32 @@ const preguntas = [
             {
                 texto: "Que nunca abandone a quienes quiere.",
                 puntos: {
-                    Naruto: 3,
-                    Jiraiya: 2
+                    Naruto: 2,
+                    Choji: 2,
+                    Hinata: 1
                 }
             },
             {
                 texto: "Que sea capaz de mantener la calma en cualquier situación.",
                 puntos: {
-                    Kakashi: 3,
-                    Itachi: 2
+                    Kakashi: 2,
+                    Hinata: 2,
+                    Shino: 1
                 }
             },
             {
                 texto: "Que tenga una meta y esté dispuesto a hacer lo necesario para alcanzarla.",
                 puntos: {
-                    Sasuke: 4,
-                    Itachi: 1
+                    Sasuke: 3,
+                    Orochimaru: 2
                 }
             },
             {
                 texto: "Que pueda entender a los demás incluso cuando no dicen lo que sienten.",
                 puntos: {
-                    Itachi: 2,
+                    Hiruzen: 2,
                     Jiraiya: 2,
-                    Kakashi: 1
+                    Hinata: 1
                 }
             }
         ]
@@ -183,29 +324,33 @@ const preguntas = [
             {
                 texto: "Volvería a intentarlo hasta conseguirlo.",
                 puntos: {
-                    Naruto: 4,
-                    Jiraiya: 1
+                    Naruto: 2,
+                    Rock_Lee: 2,
+                    Sakura: 1
                 }
             },
             {
                 texto: "Analizaría mis errores antes de volver a intentarlo.",
                 puntos: {
-                    Kakashi: 3,
-                    Itachi: 2
+                    Shino: 2,
+                    Kakashi: 2,
+                    Shikamaru: 1
                 }
             },
             {
                 texto: "Me obsesionaría con superar a quien me derrotó.",
                 puntos: {
-                    Sasuke: 4,
-                    Naruto: 1
+                    Sasuke: 3,
+                    Neji: 1,
+                    Rock_Lee: 1
                 }
             },
             {
                 texto: "Intentaría aprender algo de la derrota y seguir adelante.",
                 puntos: {
-                    Jiraiya: 3,
-                    Kakashi: 2
+                    Gaara: 2,
+                    Hiruzen: 2,
+                    Jiraiya: 1
                 }
             }
         ]
@@ -217,29 +362,33 @@ const preguntas = [
             {
                 texto: "El que mantiene al grupo unido y anima a los demás.",
                 puntos: {
-                    Naruto: 4,
-                    Jiraiya: 1
+                    Naruto: 2,
+                    Choji: 2,
+                    Rock_Lee: 1
                 }
             },
             {
                 texto: "El que observa la situación y decide cuándo intervenir.",
                 puntos: {
                     Kakashi: 3,
-                    Itachi: 2
+                    Shino: 2,
+                    Hinata: 1
                 }
             },
             {
                 texto: "El que prefiere encargarse de su parte por su cuenta.",
                 puntos: {
-                    Sasuke: 4,
-                    Itachi: 1
+                    Sasuke: 2,
+                    Neji: 2,
+                    Gaara: 1
                 }
             },
             {
                 texto: "El que intenta enseñar o aconsejar a los demás.",
-                puntos: {
-                    Jiraiya: 4,
-                    Kakashi: 1
+                puntos: { 
+                    Tsunade: 2,
+                    Hiruzen: 2,
+                    Hinata: 1
                 }
             }
         ]
@@ -250,30 +399,33 @@ const preguntas = [
         opciones: [
             {
                 texto: "Intentaría entender por qué decidió ocultármelo.",
-                puntos: {
-                    Naruto: 3,
-                    Jiraiya: 2
+                puntos: { 
+                    Hinata: 3,
+                    Hiruzen: 1,
+                    Choji: 1
                 }
             },
             {
                 texto: "Mantendría la calma y buscaría toda la información antes de reaccionar.",
                 puntos: {
                     Kakashi: 3,
-                    Itachi: 2
+                    Shino: 2,
+                    Shikamaru: 1
                 }
             },
             {
                 texto: "Me sentiría traicionado y exigiría saber toda la verdad.",
                 puntos: {
-                    Sasuke: 4,
-                    Naruto: 1
+                    Sasuke: 3,
+                    Sakura: 2
                 }
             },
             {
                 texto: "Probablemente ya sospecharía que había algo detrás.",
                 puntos: {
-                    Itachi: 3,
-                    Kakashi: 2
+                    Itachi: 2,
+                    Orochimaru: 2,
+                    Kakashi: 1
                 }
             }
         ]
@@ -285,29 +437,30 @@ const preguntas = [
             {
                 texto: "Entrenar hasta superar mis propios límites.",
                 puntos: {
-                    Naruto: 3,
-                    Jiraiya: 2
+                    Rock_Lee: 3,
+                    Naruto: 2
                 }
             },
             {
                 texto: "Aprender de personas con más experiencia que yo.",
                 puntos: {
-                    Jiraiya: 3,
-                    Kakashi: 2
+                    Sakura: 3,
+                    Rock_Lee: 2
                 }
             },
             {
                 texto: "Estudiar mis debilidades y desarrollar una estrategia para compensarlas.",
                 puntos: {
-                    Kakashi: 3,
-                    Itachi: 2
+                    Shikamaru: 3,
+                    Shino: 2
                 }
             },
             {
                 texto: "Encontrar mi propio camino, aunque tenga que hacerlo solo.",
                 puntos: {
-                    Sasuke: 4,
-                    Itachi: 1
+                    Sasuke: 2,
+                    Itachi: 2,
+                    Gaara: 1
                 }
             }
         ]

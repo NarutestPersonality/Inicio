@@ -28,39 +28,42 @@ const fondos = [
 
 const preguntas = [
     {
-        pregunta: "¿Qué elemento te gustaría poseer?",
+        pregunta: "¿Qué elemento te gustaría usar en combate?",
         opciones: [
             {
                 texto: "Fuego",
                 puntos: {
-                    Naruto: 3,
+                    Sasuke: 3,
                     Jiraiya: 2
                 }
             },
             {
                 texto: "Agua",
                 puntos: {
-                    Orochimaru: 3,
-                    Sasuke: 2
+                    Hinata: 3,
+                    Neji: 2
                 }
             },
             {
                 texto: "Rayo",
                 puntos: {
-                    Tsunade: 3,
-                    Sakura: 2
+                    Kakashi: 3,
+                    Sasuke: 2
                 }
             },
             {
                 texto: "Tierra",
                 puntos: {
-                    Kakashi: 5
+                    Choji: 2,
+                    Sakura: 1,
+                    Tsunade: 2
                 }
             },
             {
                 texto: "Viento",
                 puntos: {
-                    Hiruzen: 5
+                    Naruto: 3,
+                    Rock_Lee: 2
                 }
             },
             {
@@ -78,40 +81,42 @@ const preguntas = [
             {
                 texto: "Aldea de la hoja",
                 puntos: {
-                    Naruto: 3,
-                    Jiraiya: 2
+                    Naruto: 2,
+                    Jiraiya: 1,
+                    Hiruzen: 2
                 }
             },
             {
                 texto: "Aldea de la arena",
                 puntos: {
-                    Orochimaru: 3,
-                    Sasuke: 2
+                    Gaara: 5
                 }
             },
             {
                 texto: "Aldea de la nube",
                 puntos: {
-                    Tsunade: 3,
+                    Sasuke: 2,
                     Sakura: 2
                 }
             },
             {
                 texto: "Aldea de la roca",
                 puntos: {
-                    Kakashi: 5
+                    Rock_Lee: 3,
+                    Kakashi: 2
                 }
             },
             {
                 texto: "Aldea de la niebla",
                 puntos: {
-                    Hiruzen: 5
+                    Orochimaru: 5
                 }
             },
             {
                 texto: "Aldea de la lluvia",
                 puntos: {
-                    Rock_Lee: 5
+                    Orochimaru: 3,
+                    Sasuke: 2
                 }
             }
         ]
@@ -461,6 +466,264 @@ const preguntas = [
                     Sasuke: 2,
                     Itachi: 2,
                     Gaara: 1
+                }
+            }
+        ]
+    },
+
+    {
+        pregunta: "¿Qué hacés cuando alguien subestima tus capacidades?",
+        opciones: [
+            {
+                texto: "Sigo esforzándome hasta demostrarme que puedo hacerlo",
+                puntos: {
+                    Hinata: 3,
+                    Sakura: 3,
+                    Rock_Lee: 2
+                }
+            },
+            {
+                texto: "No necesito demostrar nada; dejo que mis resultados hablen",
+                puntos: {
+                    Shino: 3,
+                    Itachi: 2,
+                    Kakashi: 1
+                }
+            },
+            {
+                texto: "Uso esa duda como motivación para superar mis límites",
+                puntos: {
+                    Sakura: 3,
+                    Naruto: 2,
+                    Hinata: 2
+                }
+            },
+            {
+                texto: "Me molesta, pero intento no dejar que me afecte",
+                puntos: {
+                    Choji: 3,
+                    Hinata: 2,
+                    Tsunade: 1
+                }
+            }
+        ]
+    },
+
+    {
+        pregunta: "¿Qué es lo más importante para vos al formar parte de un equipo?",
+        opciones: [
+            {
+                texto: "Saber que podemos confiar unos en otros",
+                puntos: {
+                    Choji: 3,
+                    Hinata: 3,
+                    Naruto: 2
+                }
+            },
+            {
+                texto: "Que cada persona cumpla su función y aporte lo mejor",
+                puntos: {
+                    Shino: 3,
+                    Sakura: 2,
+                    Kakashi: 2
+                }
+            },
+            {
+                texto: "Que nadie se quede atrás cuando las cosas se complican",
+                puntos: {
+                    Hinata: 3,
+                    Choji: 2,
+                    Tsunade: 2
+                }
+            },
+            {
+                texto: "Que podamos resolver cualquier problema trabajando juntos",
+                puntos: {
+                    Sakura: 3,
+                    Shino: 2,
+                    Tsunade: 2
+                }
+            }
+        ]
+    },
+
+    {
+        pregunta: "Si tuvieras la oportunidad de aprender algo prohibido, ¿qué harías?",
+        opciones: [
+            {
+                texto: "Lo investigaría a fondo, aunque otros no comprendan mi interés",
+                puntos: {
+                    Orochimaru: 4,
+                    Shino: 2
+                }
+            },
+            {
+                texto: "Intentaría descubrir sus secretos, pero sin poner a otros en peligro",
+                puntos: {
+                    Shino: 3,
+                    Sakura: 2,
+                    Itachi: 1
+                }
+            },
+            {
+                texto: "Me preguntaría por qué está prohibido antes de decidir",
+                puntos: {
+                    Itachi: 3,
+                    Tsunade: 2,
+                    Kakashi: 1
+                }
+            },
+            {
+                texto: "No lo haría si existe la posibilidad de perjudicar a alguien",
+                puntos: {
+                    Hinata: 3,
+                    Choji: 2,
+                    Tsunade: 2
+                }
+            }
+        ]
+    },
+    {
+        pregunta: "Cuando alguien que querés comete un error grave, ¿cómo reaccionás?",
+        opciones: [
+            {
+                texto: "Lo ayudo a afrontar las consecuencias y a mejorar",
+                puntos: {
+                    Tsunade: 3,
+                    Sakura: 3,
+                    Choji: 1
+                }
+            },
+            {
+                texto: "Intento comprender qué lo llevó a actuar así",
+                puntos: {
+                    Itachi: 3,
+                    Hinata: 2,
+                    Shino: 1
+                }
+            },
+            {
+                texto: "Le digo la verdad, aunque sea difícil de escuchar",
+                puntos: {
+                    Tsunade: 3,
+                    Sakura: 2,
+                    Shino: 2
+                }
+            },
+            {
+                texto: "Me quedo a su lado, pero dejo que decida cómo seguir",
+                puntos: {
+                    Choji: 3,
+                    Hinata: 3,
+                    Itachi: 1
+                }
+            }
+        ]
+    },
+    {
+        pregunta: "¿Qué estarías dispuesto a sacrificar para alcanzar un objetivo importante?",
+        opciones: [
+            {
+                texto: "Mi comodidad y mi tiempo, pero no mis principios",
+                puntos: {
+                    Sakura: 3,
+                    Tsunade: 2,
+                    Hinata: 2
+                }
+            },
+            {
+                texto: "Mi propia felicidad si eso protege a las personas importantes",
+                puntos: {
+                    Itachi: 4,
+                    Tsunade: 2
+                }
+            },
+            {
+                texto: "Casi cualquier cosa, si el conocimiento que obtengo lo justifica",
+                puntos: {
+                    Orochimaru: 4,
+                    Shino: 1
+                }
+            },
+            {
+                texto: "Nada que me impida seguir siendo fiel a mí mismo",
+                puntos: {
+                    Choji: 3,
+                    Hinata: 2,
+                    Naruto: 2
+                }
+            }
+        ]
+    },
+    {
+        pregunta: "¿Cómo solés darte cuenta de que algo no está bien?",
+        opciones: [
+            {
+                texto: "Noto pequeños detalles que los demás suelen pasar por alto",
+                puntos: {
+                    Shino: 4,
+                    Itachi: 2
+                }
+            },
+            {
+                texto: "Percibo cambios en el ánimo o la actitud de las personas",
+                puntos: {
+                    Hinata: 3,
+                    Sakura: 2,
+                    Choji: 2
+                }
+            },
+            {
+                texto: "Analizo los hechos hasta encontrar qué no encaja",
+                puntos: {
+                    Shino: 3,
+                    Sakura: 2,
+                    Tsunade: 2
+                }
+            },
+            {
+                texto: "Me doy cuenta cuando alguien necesita ayuda, aunque no lo diga",
+                puntos: {
+                    Hinata: 3,
+                    Choji: 3,
+                    Tsunade: 1
+                }
+            }
+        ]
+    },
+    {
+        pregunta: "Cuando algo te sale mal a pesar de haberlo intentado todo, ¿qué hacés?",
+        opciones: [
+            {
+                texto: "Reviso mis errores y busco una forma mejor de hacerlo",
+                puntos: {
+                    Sakura: 3,
+                    Tsunade: 3,
+                    Shino: 1
+                }
+            },
+            {
+                texto: "Me tomo un tiempo para recuperarme y vuelvo a intentarlo",
+                puntos: {
+                    Hinata: 3,
+                    Choji: 2,
+                    Sakura: 2
+                }
+            },
+            {
+                texto: "Cambio de estrategia; insistir no siempre es la solución",
+                puntos: {
+                    Shino: 3,
+                    Tsunade: 2,
+                    Kakashi: 2
+                }
+            },
+            {
+                texto: "Busco entender por qué ocurrió, aunque la respuesta sea incómoda",
+                puntos: {
+                    Orochimaru: 3,
+                    Itachi: 2,
+                    Sakura: 1
                 }
             }
         ]

@@ -82,8 +82,11 @@ const preguntas = [
                 texto: "Aldea de la hoja",
                 puntos: {
                     Naruto: 2,
-                    Jiraiya: 1,
-                    Hiruzen: 2
+                    Jiraiya: 5,
+                    Hiruzen: 2,
+                    Shikamaru: 5,
+                    Neji: 5,
+                    Choji: 5
                 }
             },
             {
@@ -128,15 +131,16 @@ const preguntas = [
             {
                 texto: "Sharingan",
                 puntos: {
-                    Itachi: 3,
-                    Sasuke: 2
+                    Itachi: 5,
+                    Sasuke: 5,
+                    Kakashi: 5,
                 }
             },
             {
                 texto: "Byakugan",
                 puntos: {
-                    Neji: 3,
-                    Hinata: 2
+                    Neji: 5,
+                    Hinata: 5
                 }
             },
             {
@@ -149,7 +153,7 @@ const preguntas = [
             {
                 texto: "Elemento Lava",
                 puntos: {
-                    Sasuke: 5
+                    Jiraiya: 5
                 }
             },
             {
@@ -531,15 +535,14 @@ const preguntas = [
             {
                 texto: "Que nadie se quede atrás cuando las cosas se complican",
                 puntos: {
-                    Hinata: 3,
-                    Choji: 2,
-                    Tsunade: 2
+                    Naruto: 3,
+                    Choji: 2
                 }
             },
             {
                 texto: "Que podamos resolver cualquier problema trabajando juntos",
                 puntos: {
-                    Sakura: 3,
+                    Sakura: 2,
                     Shino: 2,
                     Tsunade: 2
                 }
@@ -730,6 +733,73 @@ const preguntas = [
     }
 ];
 
+const fichas = {
+    Naruto: {
+        descripcion: "Eres energético, perseverante, impulsivo y leal. Eres fiel a tus ideales y cuidas de tu gente, aunque a veces no sepas cuándo cerrar la boca y seas un cabeza hueca.",
+        dupla: "Rock_Lee"
+    },
+    Sasuke: {
+        descripcion: "Eres independiente, reservado, determinado y orgulloso. Te cuesta confiar en los demás y tienes objetivos claros, pero probablemente te haría bien un amigo que te diga cuando parar, en serio, considera escuchar menos My Chemical Romance.",
+        dupla: "Shino"
+    },
+    Kakashi: {
+        descripcion: "Eres tranquilo, observador, inteligente y pragmático. Sabes mantener la cabeza fría en situaciones difíciles, aunque tu puntualidad y tu historial de búsqueda sean cuestionables.",
+        dupla: "Hiruzen"
+    },
+    Gaara: {
+        descripcion: "Eres introspectivo, intenso, reservado y profundamente leal a quienes logran ganarse tu confianza. Has aprendido a cambiar con el tiempo, aunque probablemente tu primera impresión sea la del loquito del centro.",
+        dupla: "Orochimaru"
+    },
+    Shikamaru: {
+        descripcion: "Eres estratégico, observador, inteligente y bastante perezoso. Prefieres resolver un problema con la cabeza antes que con los puños, aunque...¿has considerado agarrar la pala?",
+        dupla: "Itachi"
+    },
+    Jiraiya: {
+        descripcion: "Eres carismático, aventurero, ingenioso y más sensible de lo que aparentas. Te gusta disfrutar de la vida, pero por favor disfrútala lejos de las mujeres",
+        dupla: "Choji"
+    },
+    Orochimaru: {
+        descripcion: "Eres curioso, ambicioso, calculador y difícil de conformar. Tu sed de conocimiento no conoce límites, pero por favor, no te acerques a los niños.",
+        dupla: "Gaara"
+    },
+    Tsunade: {
+        descripcion: "Eres fuerte, decidida, protectora y pragmática. No te tiembla el pulso cuando hay que tomar decisiones difíciles. Y no te preocupes, que ser un ludópata en potencia no te detenga.",
+        dupla: "Sakura"
+    },
+    Sakura: {
+        descripcion: "Eres muy inteligente, sensible y mucho más fuerte de lo que los demás imaginan. Trabajas para mejorar y no te rindes fácilmente, pero ¿sabes una cosa? una pareja no te hará feliz, ya suéltalo amiga.",
+        dupla: "Tsunade"
+    },
+    Hiruzen: {
+        descripcion: "Eres sabio, paciente, reflexivo y protector. Intentas comprender a las personas antes de juzgarlas, aunque a veces deberías confiar menos en el destino y hacer algo al respecto antes de que arruines todo por esperar demasiado.",
+        dupla: "Kakashi"
+    },
+    Itachi: {
+        descripcion: "Eres reservado, perceptivo, estratégico y puedes hacer cosas complicadas más fácil que otros. Piensas mucho en las consecuencias de tus decisiones y proteges a ese alguien especial con tu vida, pero no deberías obedecer todo lo que te dicen, no eres un títere de Kankuro.",
+        dupla: "Shikamaru"
+    },
+    Rock_Lee: {
+        descripcion: "Eres apasionado, disciplinado, optimista y extremadamente perseverante. Crees que el esfuerzo puede superar cualquier obstáculo, aunque probablemente necesites usar más desodorante y bajar el volumen de tu voz.",
+        dupla: "Naruto"
+    },
+    Neji: {
+        descripcion: "Eres observador, disciplinado, orgulloso y exigente. Analizas las situaciones con precisión y valoras la habilidad por encima de las excusas, pero eres un pesado bro, ya cállate un rato.",
+        dupla: "Hinata"
+    },
+    Hinata: {
+        descripcion: "Eres amable, empática, tímida y perseverante. Puede que no siempre expreses tus emociones, pero sabes cuándo encontrar el valor para actuar si la situación lo necesita. Aunque si voy a oírte hablar, primero necesito un jutsu de paciencia infinita.",
+        dupla: "Neji"
+    },
+    Choji: {
+        descripcion: "Eres noble, tranquilo, generoso y muy leal. Valoras la amistad y siempre estás dispuesto a ayudar a quienes quieres, pero deberías dejar de vivir en una competencia de quién come más.",
+        dupla: "Jiraiya"
+    },
+    Shino: {
+        descripcion: "Eres calmado, analítico, solitario, reservado y muy inteligente, aunque tal vez necesites tomar sol y tomar clases de sociabilidad.",
+        dupla: "Sasuke"
+    }
+};
+
 let preguntaActual = 0;
 
 const elementoPregunta = document.getElementById("pregunta");
@@ -753,12 +823,35 @@ function mostrarResultado() {
         }
     }
 
-    document.querySelector(".contenedor").style.display = "none";
 
-    elementoResultado.innerHTML = `
-        <h2>¡Tu personalidad es similar a la de ${ganador}!</h2>
-        <img src="./media/personajes/${ganador}.png" alt="${ganador}" loading="lazy" decoding="async">
-    `;
+    const ficha = fichas[ganador] || { descripcion: "", dupla: null };
+    const nombre = ganador.replace("_", " ");
+
+    document.getElementById("res-titulo").textContent = `¡Tu personalidad es similar a la de ${nombre}!`;
+
+    const img = document.getElementById("res-img");
+    img.src = `./media/personajes/${ganador}.png`;
+    img.alt = nombre;
+
+    document.getElementById("res-desc").textContent = ficha.descripcion;
+
+    const bloqueDupla = document.querySelector(".res-dupla");
+
+    if (ficha.dupla) {
+        const nombreDupla = ficha.dupla.replace("_", " ");
+        const imgDupla = document.getElementById("res-dupla-img");
+
+        imgDupla.src = `./media/personajes/${ficha.dupla}.png`;
+        imgDupla.alt = nombreDupla;
+        document.getElementById("res-dupla-nombre").textContent = nombreDupla;
+
+        bloqueDupla.style.display = "";
+    } else {
+        bloqueDupla.style.display = "none";
+    }
+
+    document.querySelector(".contenedor").style.display = "none";
+    elementoResultado.hidden = false;
 }
 
 function mostrarPregunta() {

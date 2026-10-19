@@ -145,19 +145,87 @@ main {
     background:rgba(0, 0, 0, 0.4);
 }
 
+/*PANTALLA DE RESULTADO*/
+
 .resultado {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
     text-align: center;
-    margin-top: 50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.resultado img {
-    width: 450px;
-    height: auto;
-    margin-top: 20px;
-    margin-bottom: 70px;
-    filter: drop-shadow(4px 2px 2px rgba(0, 0, 0, 0.608));
+.resultado[hidden] {
+    display: none;
+}
 
+.res-titulo {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.res-foto {
+    display: flex;
+    justify-content: center;
+}
+
+.res-foto img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    filter: drop-shadow(4px 2px 2px rgba(0, 0, 0, 0.608));
+}
+
+.res-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.res-info p {
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.res-radar {
+    width: 100%;
+    max-width: 480px;
+    min-width: 0;
+}
+
+.res-dupla summary {
+    cursor: pointer;
+    list-style: none;
+    background: rgb(89, 100, 255);
+    color: whitesmoke;
+    font-weight: bold;
+    border-radius: 999px;
+    padding: 8px 18px;
+}
+
+.res-dupla summary:hover {
+    color: whitesmoke;
+    background: rgb(28, 0, 213);
+}
+
+.dupla-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.dupla-contenido img {
+    width: 110px;
+    height: auto;
+    filter: drop-shadow(4px 2px 2px rgba(0, 0, 0, 0.608));
 }
 
 footer {
@@ -233,19 +301,22 @@ summary::marker {
     }
 
     .resultado {
-        margin: 30px 1rem 0;
+        grid-template-columns: 1fr;
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    .res-titulo {
+        font-size: 1.4rem;
+        padding: 15px;
+}
+
+    .res-foto img {
+        max-width: 260px;
     }
 
     .resultado h2 {
         font-size: 22px;
-    }
-
-    .resultado img {
-        width: 100%;
-        max-width: 450px;
-        height: auto;
-        margin-top: 20px;
-        margin-bottom: 40px;
     }
 
     footer {

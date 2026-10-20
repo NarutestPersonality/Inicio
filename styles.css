@@ -196,7 +196,7 @@ main {
 
 .resultado p {
     font-size: 1.1rem;
-    font-weight: 350;
+    font-weight: 380;
     line-height: 1.2;
 }
 
@@ -459,7 +459,7 @@ summary::marker {
 
     .btn-datos {
         display: block;
-        background: rgba(221, 221, 221, 0.986);
+        background: rgb(235, 235, 235);
         color: rgb(0, 0, 0);
         font-weight: bold;
         border-radius: 999px;

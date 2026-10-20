@@ -51,6 +51,7 @@ h1 {
     background-image: linear-gradient(rgba(253, 159, 0), rgba(251, 68, 3));
     background-clip: text;
     color: transparent;
+    margin-bottom: 15px;
 }
 
 a {
@@ -194,8 +195,9 @@ main {
 }
 
 .resultado p {
-    font-size: 1.15rem;
-    font-weight: bold;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    line-height: 1.2;
 }
 
 #res-desc {
@@ -426,7 +428,7 @@ summary::marker {
         padding: 0.5rem 0 1rem;
     }
 
-    /* 115px ≈ alto del header en celular; ajustalo si el tuyo mide distinto */
+    /* 115px ≈ alto del header en celular */
     .res-pantalla-1 {
         min-height: calc(100svh - 115px);
         justify-content: space-evenly;
@@ -457,18 +459,46 @@ summary::marker {
 
     .btn-datos {
         display: block;
-        background: rgb(89, 100, 255);
-        color: whitesmoke;
+        background: rgba(221, 221, 221, 0.915);
+        color: rgb(0, 0, 0);
         font-weight: bold;
         border-radius: 999px;
-        padding: 10px 22px;
+        padding: 8px 20px;
     }
 
     .btn-datos:hover {
-        background: rgb(28, 0, 213);
+        background: rgb(67, 38, 255);
+        color: rgb(245, 245, 245);
+    }
+
+    .scroll-hint {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .scroll-hint span {
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid rgba(3, 3, 3, 0.66);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.66);
+        transform: rotate(45deg);
+        animation: scrollBounce 1.6s infinite;
+    }
+
+    @keyframes scrollBounce {
+        0% {transform: rotate(45deg) translate(0, 0); opacity: 0;}
+        50% {opacity: 1;}
+        100% {transform: rotate(45deg) translate(0, 0); opacity: 0;}
     }
 
     .res-radar {
+        background-color: rgba(245, 245, 245, 0.804);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 5%;
+        padding: 10px 6px;
+        box-shadow: 7px 8px 8px rgba(0, 0, 0, 0.662);
         flex-direction: column;
         gap: 0.75rem;
     }

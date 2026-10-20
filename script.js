@@ -815,6 +815,7 @@ function sumarPuntos(puntos) {
 function mostrarResultado() {
     let ganador = "";
     let mayorPuntaje = -1;
+    dibujarRadar({ CUR: 4, RES: 6, SOC: 2, AMB: 7, EST: 9 });
 
     for (const personaje in personajes) {
         if (personajes[personaje] > mayorPuntaje) {

@@ -150,11 +150,13 @@ main {
 .resultado {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 2rem;
+    /* filas 2 y 6 (1fr) son "colchones": centran en vertical lo de la derecha respecto a la foto */
+    grid-template-rows: auto 1fr auto auto auto 1fr;
+    column-gap: 2rem;
+    row-gap: 1.5rem;
     width: 90%;
     max-width: 1200px;
-    margin: 50px auto;
+    margin: 40px auto;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -163,13 +165,23 @@ main {
     display: none;
 }
 
+/* en escritorio las "pantallas" no existen: sus hijos se acomodan directo en la grilla */
+.res-pantalla {
+    display: contents;
+}
+
 .res-titulo {
+    grid-column: 1 / -1;
+    grid-row: 1;
     text-align: center;
     font-size: 1.8rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .res-foto {
+    grid-column: 1;
+    grid-row: 2 / 7;
+    align-self: center;
     display: flex;
     justify-content: center;
 }
@@ -181,22 +193,74 @@ main {
     filter: drop-shadow(4px 2px 2px rgba(0, 0, 0, 0.608));
 }
 
-.res-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.res-info p {
+.resultado p {
     font-size: 1.15rem;
     font-weight: bold;
 }
 
+#res-desc {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+/*RADAR DE PERSONALIDAD*/
+
 .res-radar {
-    width: 100%;
-    max-width: 480px;
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     min-width: 0;
+}
+
+.res-radar svg {
+    width: 260px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.radar-anillo,
+.radar-eje {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.3);
+    stroke-width: 1;
+}
+
+.radar-forma {
+    fill: rgba(240, 80, 50, 0.55);
+    stroke: rgb(215, 60, 35);
+    stroke-width: 2.5;
+    stroke-linejoin: round;
+}
+
+.radar-punto {
+    fill: rgb(215, 60, 35);
+    stroke: whitesmoke;
+    stroke-width: 1.5;
+}
+
+.radar-sigla {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    fill: black;
+}
+
+.radar-leyenda {
+    list-style: none;
+    font-size: 0.72rem;
+    text-align: left;
+    line-height: 1.5;
+}
+
+/*DUPLA IDEAL*/
+
+.res-dupla {
+    grid-column: 2;
+    grid-row: 5;
+    justify-self: center;
 }
 
 .res-dupla summary {
@@ -227,6 +291,42 @@ main {
     height: auto;
     filter: drop-shadow(4px 2px 2px rgba(0, 0, 0, 0.608));
 }
+
+/* cosas que solo existen en celular */
+.btn-datos,
+.res-divisor,
+.solo-movil {
+    display: none;
+}
+
+/*ADORNO SEPARADOR (celular)*/
+
+.res-divisor {
+    position: relative;
+    width: 100%;
+    height: 28px;
+}
+
+.res-divisor::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, black, transparent);
+}
+
+.res-divisor::after {
+    content: "✦";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4rem;
+    color: black;
+}
+
 
 footer {
     background: black;
@@ -300,23 +400,110 @@ summary::marker {
         font-size: 14px;
     }
 
+    /* ----- RESULTADO EN CELULAR: dos pantallas con scroll-snap ----- */
+
+    html {
+        scroll-snap-type: y proximity;
+    }
+
+    header {
+        scroll-snap-align: start;
+    }
+
     .resultado {
-        grid-template-columns: 1fr;
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    .res-pantalla {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
         width: 92%;
-        margin: 30px auto;
+        margin: 0 auto;
+        padding: 0.5rem 0 1rem;
+    }
+
+    /* 115px ≈ alto del header en celular; ajustalo si el tuyo mide distinto */
+    .res-pantalla-1 {
+        min-height: calc(100svh - 115px);
+        justify-content: space-evenly;
+    }
+
+    .res-pantalla-2 {
+        min-height: 100svh;
+        justify-content: space-evenly;
+        scroll-snap-align: start;
     }
 
     .res-titulo {
         font-size: 1.4rem;
         padding: 15px;
-}
-
-    .res-foto img {
-        max-width: 260px;
     }
 
-    .resultado h2 {
-        font-size: 22px;
+    .res-foto {
+        width: 100%;
+    }
+
+    .res-foto img {
+        max-width: 100%;
+    }
+
+    .res-divisor {
+        display: block;
+    }
+
+    .btn-datos {
+        display: block;
+        background: rgb(89, 100, 255);
+        color: whitesmoke;
+        font-weight: bold;
+        border-radius: 999px;
+        padding: 10px 22px;
+    }
+
+    .btn-datos:hover {
+        background: rgb(28, 0, 213);
+    }
+
+    .res-radar {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .res-radar svg {
+        width: 300px;
+        max-width: 100%;
+    }
+
+    .radar-leyenda {
+        font-size: 0.8rem;
+    }
+
+    /* la dupla ya no es un botón: queda siempre abierta */
+    .res-dupla summary {
+        pointer-events: none;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 6px 22px;
+    }
+
+    .solo-pc {
+        display: none;
+    }
+
+    .solo-movil {
+        display: inline;
+    }
+
+    .dupla-contenido img {
+        width: 150px;
+    }
+
+    .dupla-contenido p {
+        font-size: 1.6rem;
     }
 
     footer {

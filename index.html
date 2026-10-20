@@ -52,30 +52,40 @@
 
         </div>
 
+<div class="resultado" id="resultado" hidden>
+
+    <!-- PANTALLA 1: tu personaje -->
+    <section class="res-pantalla res-pantalla-1">
         <h2 class="res-titulo" id="res-titulo"></h2>
 
-        <div class="resultado" id="resultado" hidden>
-
-    <div class="res-foto">
-        <img id="res-img" src="" alt="">
-    </div>
-
-    <div class="res-info">
-
-        <div class="res-radar">
-            <!-- acá irá el radar, lo dejamos para el final -->
+        <div class="res-foto">
+            <img id="res-img" src="" alt="">
         </div>
 
         <p id="res-desc"></p>
 
+        <a href="#res-datos" class="btn-datos">Descubre tus datos</a>
+
+        <div class="res-divisor" aria-hidden="true"></div>
+    </section>
+
+    <!-- PANTALLA 2: tus datos -->
+    <section class="res-pantalla res-pantalla-2" id="res-datos">
+        <div class="res-divisor" aria-hidden="true"></div>
+
+        <div class="res-radar"></div>
+
         <details class="res-dupla">
-            <summary>Descubre a tu dupla ideal</summary>
+            <summary>
+                <span class="solo-pc">Descubre a tu dupla ideal</span>
+                <span class="solo-movil">DUPLA IDEAL</span>
+            </summary>
             <div class="dupla-contenido">
                 <img id="res-dupla-img" src="" alt="">
                 <p id="res-dupla-nombre"></p>
             </div>
         </details>
-    </div>
+    </section>
 
 </div>
 
@@ -95,6 +105,7 @@
 
 </footer>
 
+    <script src="radar.js"></script>
     <script src="script.js"></script>
 
 </body>

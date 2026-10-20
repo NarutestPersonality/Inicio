@@ -51,7 +51,7 @@ h1 {
     background-image: linear-gradient(rgba(253, 159, 0), rgba(251, 68, 3));
     background-clip: text;
     color: transparent;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 a {
@@ -196,7 +196,7 @@ main {
 
 .resultado p {
     font-size: 1.1rem;
-    font-weight: lighter;
+    font-weight: 250;
     line-height: 1.2;
 }
 
@@ -459,7 +459,7 @@ summary::marker {
 
     .btn-datos {
         display: block;
-        background: rgba(221, 221, 221, 0.915);
+        background: rgba(221, 221, 221, 0.986);
         color: rgb(0, 0, 0);
         font-weight: bold;
         border-radius: 999px;
